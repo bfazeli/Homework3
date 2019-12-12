@@ -3,4 +3,7 @@
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
+    <color name="colorAppView">#86C2C9</color>
+    <color name='buttonColor'>#CB004D</color>
+    <color name='buttonTextColor'>#FFFFFF</color>
 </resources>

@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="totalFor15"
+            type="CharSequence" />
+        <variable
+            name="tipFor15"
+            type="CharSequence" />
+        <variable
+            name="totalFor18"
+            type="CharSequence" />
+        <variable
+            name="tipFor18"
+            type="CharSequence" />
+        <variable
+            name="totalFor20"
+            type="CharSequence" />
+        <variable
+            name="tipFor20"
+            type="CharSequence" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/parentView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorAppView">
+
+        <TextView
+            android:id="@+id/welcomeTipTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/welcome_tip_calculator"
+            android:textSize="30sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="100dp" />
+
+        <EditText
+            android:id="@+id/input_sub"
+            android:layout_width="120dp"
+            android:layout_height="80dp"
+            android:textSize="30sp"
+            android:hint="@string/tip_hint"
+            android:paddingEnd="10dp"
+            android:paddingStart="10dp"
+            android:textAlignment="textEnd"
+            android:background="@color/buttonTextColor"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/welcomeTipTextView"
+            android:layout_marginTop="100dp"
+            android:layout_marginStart="40dp" />
+
+        <Button
+            android:id="@+id/calculateTipButton"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="@string/get_tip"
+            android:background="@color/buttonColor"
+            android:textColor="@color/buttonTextColor"
+            android:textSize="20sp"
+            android:layout_margin="20dp"
+            app:layout_constraintStart_toEndOf="@+id/input_sub"
+            app:layout_constraintBaseline_toBaselineOf="@+id/input_sub"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/checkBoxStack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/input_sub"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_margin="20dp"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:id="@+id/fifteenPercentCheckBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/ubEditText"
+                android:hint="@string/fifteen_percent"
+                android:checked="true"
+                android:textSize="16sp" />
+
+            <CheckBox
+                android:id="@+id/eighteenPercentCheckBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/ubEditText"
+                android:layout_marginStart="20dp"
+                android:hint="@string/eighteen_percent"
+                android:textSize="16sp" />
+
+            <CheckBox
+                android:id="@+id/twentyPercentCheckBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/ubEditText"
+                android:layout_marginStart="20dp"
+                android:hint="@string/twenty_percent"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/output15TotalTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@={totalFor15}"
+            android:textSize="30sp"
+            app:layout_constraintStart_toStartOf="@+id/checkBoxStack"
+            app:layout_constraintTop_toTopOf="@+id/checkBoxStack"
+            android:layout_marginTop="100dp"/>
+        <TextView
+            android:id="@+id/output15TipTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@={tipFor15}"
+            android:textSize="30sp"
+            app:layout_constraintEnd_toEndOf="@+id/checkBoxStack"
+            app:layout_constraintStart_toEndOf="@id/output15TotalTextView"
+            app:layout_constraintBaseline_toBaselineOf="@+id/output15TotalTextView" />
+
+        <TextView
+            android:id="@+id/output18TotalTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@={totalFor18}"
+            android:textSize="30sp"
+            app:layout_constraintStart_toStartOf="@id/checkBoxStack"
+            app:layout_constraintTop_toTopOf="@+id/output15TotalTextView"
+            android:layout_marginTop="50dp" />
+        <TextView
+            android:id="@+id/output18TipTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@={tipFor18}"
+            android:textSize="30sp"
+            app:layout_constraintEnd_toEndOf="@id/checkBoxStack"
+            app:layout_constraintStart_toEndOf="@id/output18TotalTextView"
+            app:layout_constraintBaseline_toBaselineOf="@+id/output18TotalTextView" />
+
+        <TextView
+            android:id="@+id/output20TotalTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@={totalFor20}"
+            android:textSize="30sp"
+            app:layout_constraintStart_toStartOf="@id/checkBoxStack"
+            app:layout_constraintTop_toTopOf="@+id/output18TotalTextView"
+            android:layout_marginTop="50dp" />
+        <TextView
+            android:id="@+id/output20TipTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@={tipFor20}"
+            android:textSize="30sp"
+            app:layout_constraintEnd_toEndOf="@id/checkBoxStack"
+            app:layout_constraintStart_toEndOf="@id/output20TotalTextView"
+            app:layout_constraintBaseline_toBaselineOf="@+id/output20TotalTextView" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

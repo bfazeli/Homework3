@@ -8,9 +8,30 @@
     <string name="action_settings">Settings</string>
 
     <string name="menu_home">Home</string>
-    <string name="menu_gallery">Gallery</string>
-    <string name="menu_slideshow">Slideshow</string>
-    <string name="menu_tools">Tools</string>
+    <string name="menu_tip">Calculate Tip</string>
+    <string name="menu_dice">Roll Dice</string>
     <string name="menu_share">Share</string>
     <string name="menu_send">Send</string>
+    <string name="menu_slideshow">Slideshow</string>
+
+    <string name="welcomeTitle">Get a Random Number!</string>
+    <string name="lb_place_holder">1</string>
+    <string name="without_replacement">Without Replacement</string>
+    <string name="get_number">RANDOM NUMBER</string>
+    <string name="get_tip">CALCULATE TIP</string>
+    <string name="output_hint">8</string>
+    <string name="up_place_holder">30</string>
+    <string name="app_title">Random Number Generator</string>
+    <string name="roll">ROLL</string>
+    <string name="go_to_tip">Go to Tip</string>
+    <string name="welcome_tip_calculator">Welcome to tip calculator</string>
+    <string name="twenty_percent">20%</string>
+    <string name="eighteen_percent">18%</string>
+    <string name="fifteen_percent">15%</string>
+    <string name="reset">Reset</string>
+    <string name="exhausted">Exhausted generating numbers</string>
+    <string name="tip_hint">10.99</string>
+    <string name="multi_app">Multi App</string>
+    <string name="welcome_to_multi_app">Welcome to Multi App</string>
+    <string name="email">Email</string>
 </resources>

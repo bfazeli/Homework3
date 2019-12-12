@@ -9,35 +9,34 @@
         android:id="@+id/nav_home"
         android:name="com.bfazeli.homework3.ui.home.HomeFragment"
         android:label="@string/menu_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_nav_home_to_tip"
+            app:destination="@id/nav_tip"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            app:popUpTo="@+id/nav_home" />
+        <action
+            android:id="@+id/action_nav_home_to_nav_dice"
+            app:destination="@id/nav_dice"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:launchSingleTop="false"
+            app:popUpTo="@+id/nav_home"
+            app:popUpToInclusive="true" />
+    </fragment>
 
     <fragment
-        android:id="@+id/nav_gallery"
-        android:name="com.bfazeli.homework3.ui.gallery.GalleryFragment"
-        android:label="@string/menu_gallery"
-        tools:layout="@layout/fragment_gallery" />
+        android:id="@+id/nav_tip"
+        android:name="com.bfazeli.homework3.ui.tip.TipCalculatorFragment"
+        android:label="@string/menu_tip" />
 
     <fragment
-        android:id="@+id/nav_slideshow"
-        android:name="com.bfazeli.homework3.ui.slideshow.SlideshowFragment"
-        android:label="@string/menu_slideshow"
-        tools:layout="@layout/fragment_slideshow" />
+        android:id="@+id/nav_dice"
+        android:name="com.bfazeli.homework3.ui.dice.PairOfDiceFragment"
+        android:label="@string/menu_dice"
+        tools:layout="@layout/fragment_pair_of_dice" />
 
-    <fragment
-        android:id="@+id/nav_tools"
-        android:name="com.bfazeli.homework3.ui.tools.ToolsFragment"
-        android:label="@string/menu_tools"
-        tools:layout="@layout/fragment_tools" />
-
-    <fragment
-        android:id="@+id/nav_share"
-        android:name="com.bfazeli.homework3.ui.share.ShareFragment"
-        android:label="@string/menu_share"
-        tools:layout="@layout/fragment_share" />
-
-    <fragment
-        android:id="@+id/nav_send"
-        android:name="com.bfazeli.homework3.ui.send.SendFragment"
-        android:label="@string/menu_send"
-        tools:layout="@layout/fragment_send" />
 </navigation>
